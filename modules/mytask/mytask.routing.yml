@@ -1,0 +1,31 @@
+mytask.display_data:
+  path: '/mytask/tasks'
+  defaults:
+    _controller: '\Drupal\mytask\Controller\DisplayTableController::tasks'
+    _title: 'All Data'
+  requirements:
+    _permission: 'access content'
+
+mytask.show_data:
+  path: '/mytask/{id}/show'
+  defaults:
+    _controller: '\Drupal\mytask\Controller\MydataController::show'
+    _title: 'Show Data'
+  requirements:
+    _permission: 'access content'
+
+mytask.delete_form:
+  path: '/mytask/{id}/delete'
+  defaults:
+    _form: '\Drupal\mytask\Form\DeleteForm'
+    _title: 'DeleteForm'
+  requirements:
+    _access: 'TRUE'
+
+mytask.add_form:
+  path: '/mytask/add'
+  defaults:
+    _title: 'Add/Edit Data'
+    _form: '\Drupal\mytask\Form\MyTaskForm'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,13 @@
+<?php
+function mysenior() {
+  $item['/mysenior/seniors']=array('title'=>'Records','description'=>'','route'=>'mysenior.display_data');
+
+  $item['/mysenior/{id}/show']=array('title'=>'Show','description'=>'','route'=>'mysenior.show_data');
+
+  $item['/mysenior/{id}/delete']=array('title'=>'Delete','description'=>'','route'=>'mysenior.delete_form:');
+
+  $item['/mysenior/add']=array('title'=>'Add','description'=>'','route'=>'mysenior.add_form');
+
+  return $item;
+}
+?>

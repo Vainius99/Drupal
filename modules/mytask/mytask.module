@@ -1,0 +1,13 @@
+<?php
+function mytask() {
+  $item['/mytask/tasks']=array('title'=>'Records','description'=>'','route'=>'mytask.display_data');
+
+  $item['/mytask/{id}/show']=array('title'=>'Show','description'=>'','route'=>'mytask.show_data');
+
+  $item['/mytask/{id}/delete']=array('title'=>'Delete','description'=>'','route'=>'mytask.delete_form:');
+
+  $item['/mytask/add']=array('title'=>'Add','description'=>'','route'=>'mytask.add_form');
+
+  return $item;
+}
+?>

@@ -1,0 +1,5 @@
+name: 'Custom Task Form'
+description: 'Custom Task Form'
+package: Custom
+type: module
+core_version_requirement: ^8 || ^9

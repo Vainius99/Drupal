@@ -1,0 +1,31 @@
+mysenior.display_data:
+  path: '/mysenior/seniors'
+  defaults:
+    _controller: '\Drupal\mysenior\Controller\DisplaySeniorTableController::seniors'
+    _title: 'All Data'
+  requirements:
+    _permission: 'access content'
+
+mysenior.show_data:
+  path: '/mysenior/{id}/show'
+  defaults:
+    _controller: '\Drupal\mysenior\Controller\MydataController::show'
+    _title: 'Show Data'
+  requirements:
+    _permission: 'access content'
+
+mysenior.delete_form:
+  path: '/mysenior/{id}/delete'
+  defaults:
+    _form: '\Drupal\mysenior\Form\DeleteForm'
+    _title: 'DeleteForm'
+  requirements:
+    _access: 'TRUE'
+
+mysenior.add_form:
+  path: '/mysenior/add'
+  defaults:
+    _title: 'Add/Edit Data'
+    _form: '\Drupal\mysenior\Form\MySeniorForm'
+  requirements:
+    _permission: 'access content'

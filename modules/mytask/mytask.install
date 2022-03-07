@@ -1,0 +1,24 @@
+<?php
+
+  function mytask_schema() {
+
+    $schema['mytable'] = array( 'fields' => array( 'id' => array('type' => 'serial', 'unsigned' => TRUE,'not null' => TRUE,),
+
+    'title' => array('description' => 'Task title', 'type' => 'varchar', 'length' => '255','not null' => TRUE,),
+
+    'link' => array('description' => 'Task link', 'type' => 'varchar', 'length' => '1000','not null' => TRUE,),
+
+    'senior' => array('description' => 'Senior/tech name and lastname', 'type' => 'varchar', 'length' => '255', 'not null' => TRUE,),
+
+    'senior_time' => array('description' => 'Senior time score for task', 'type' => 'varchar', 'length' => '30', 'not null' => TRUE,),
+
+    'junior_time' => array('description' => 'Junior time score for task', 'type' => 'varchar', 'length' => '30', 'not null' => TRUE,),
+
+    'status' => array('description' => 'Status', 'type' => 'varchar', 'length' => '255', 'not null' => TRUE,),
+    ),
+    'primary key' => array('id'),
+    );
+
+    return $schema;
+
+}
